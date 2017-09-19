@@ -1,16 +1,91 @@
-<!DOCTYPE html>
-<pre>    
-   __            _                                
-  / _|          | |                               
- | |_ _   _  ___| | __  _   _  ___  _   _         
- |  _| | | |/ __| |/ / | | | |/ _ \| | | |        
- | | | |_| | (__|   <  | |_| | (_) | |_| |        
- |_|  \__,_|\___|_|\_\  \__, |\___/ \__,_|      _ 
-     | (_)    | |        __/ |                 | |
-   __| |_  ___| | __  __|___/ _ _   _  __ _  __| |
-  / _` | |/ __| |/ / / __|/ _` | | | |/ _` |/ _` |
- | (_| | | (__|   <  \__ \ (_| | |_| | (_| | (_| |
-  \__,_|_|\___|_|\_\ |___/\__, |\__,_|\__,_|\__,_|
-                             | |                  
-                             |_|                  
+<html>
+<head>
+    <link rel="stylesheet" type="text/css" href="theme.css">
+    <meta charset="UTF-8">
+    <meta name="description" content="Dicksquad website">
+    <meta name="keywords" content="Dicksquad website, dicksquad">
+    <meta name="author" content="Wesley Lesher">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>console</title>
+<!--Script-->
+<script>
+	var userstr = "";
+		
+	
+	
+	window.onload = function start() {
+    slide(10);
+}
+function slide(repeats) {
+    if (repeats > 0) {
+        var input = document.getElementById("userinput");
+		input.onkeypress = function(e) {
+		e = e || window.event;
+		var charCode = (typeof e.which == "number") ? e.which : e.keyCode;
+		
+		if (charCode > 0) {
+				
+				userstr = userstr.concat(e.key);
+				if(e.key == "Enter"){
+					enter();
+				}
+			}
+		}
+        window.setTimeout(
+          function(){
+            slide(repeats - 1)
+          },
+          3000
+        );
+    }
+}
+function enter(){
+	if(userstr == "dirEnter"){
+		console.log("dir");
+		alert("User typed dir and hit the enter key");
+		document.getElementById("userinput").value = "";
+	}
+	else if(userstr == "dicksquadEnter"){
+		console.log("dicksquad");
+		alert("sick quads")
+		document.getElementById("userinput").value = "";
+	}
+	else if(userstr == "dick squadEnter"){
+		console.log("dick squad");
+		alert("sick quads")
+		document.getElementById("userinput").value = "";
+	}
+	else if(userstr == "sick quadsEnter"){
+		console.log("sick quads");
+		window.location.replace("supersecretwebpage");
+		document.getElementById("userinput").value = "";
+	}
+	else if(userstr == "projects.htmlEnter"){
+		console.log("projects.html");
+		window.location.replace("projects.html");
+	}
+	userstr = "";
+}
+</script>
+</head>
+<!-- Body -->
+<body>
+	<label class="console">
+		8=D:\>
+	</label>
+	<input type="text" id="userinput" class="console">
+	</input>
+  <pre>
+                       _     _              _     _        
+                      | |   | |            | |   (_)       
+   __ _    ___   ___  | |_  | |__     ___  | |_   _    ___ 
+  / _` |  / _ \ / __| | __| | '_ \   / _ \ | __| | |  / __|
+ | (_| | |  __/ \__ \ | |_  | | | | |  __/ | |_  | | | (__ 
+  \__,_|  \___| |___/  \__| |_| |_|  \___|| \__| |_|  \___|
+       ___    ___    _ __    ___    ___   | |   ___        
+      / __|  / _ \  | '_ \  / __|  / _ \  | |  / _ \       
+     | (__  | (_) | | | | | \__ \ | (_) | | | |  __/       
+      \___|  \___/  |_| |_| |___/  \___/  |_|  \___|       
 </pre>
+</body>
+</html>
