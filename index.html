@@ -40,9 +40,9 @@ function slide(repeats) {
     }
 }
 function enter(){
-	if(userstr == "dirEnter"){
-		console.log("dir");
-		alert("User typed dir and hit the enter key");
+	if(userstr == "projectsEnter"){
+		console.log("projects");
+		window.location.replace("projects.html");
 		document.getElementById("userinput").value = "";
 	}
 	else if(userstr == "dicksquadEnter"){
