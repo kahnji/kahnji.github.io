@@ -1,0 +1,71 @@
+<html>
+<head>
+    <link rel="stylesheet" type="text/css" href="theme.css">
+    <meta charset="UTF-8">
+    <meta name="description" content="kahn's warehouse for stuff.">
+    <meta name="keywords" content="kahnji's warehouse, kahnji, warehouse, kahnji's">
+    <meta name="author" content="roomsaver, modified by kahnji">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>kahn's warehouse</title>
+<!--Script-->
+<script>
+	var userstr = "";
+		
+	
+	
+	window.onload = function start() {
+    slide(10);
+}
+function slide(repeats) {
+    if (repeats > 0) {
+        var input = document.getElementById("userinput");
+		input.onkeypress = function(e) {
+		e = e || window.event;
+		var charCode = (typeof e.which == "number") ? e.which : e.keyCode;
+		
+		if (charCode > 0) {
+				
+				userstr = userstr.concat(e.key);
+				if(e.key == "Enter"){
+					enter();
+				}
+			}
+		}
+        window.setTimeout(
+          function(){
+            slide(repeats - 1)
+          },
+          3000
+        );
+    }
+}
+function enter(){
+	if(userstr == "projectsEnter"){
+		console.log("projects");
+		window.location.replace("projects.html");
+		document.getElementById("userinput").value = "";
+	}
+	else if(userstr == "dicksquadEnter"){
+		console.log("dicksquad");
+		window.location.href = "https://dicksquad.github.io/";
+		document.getElementById("userinput").value = "";
+	}
+	else if(userstr == "dick squadEnter"){
+		console.log("dick squad");
+		window.location.href = "https://dicksquad.github.io/";
+		document.getElementById("userinput").value = "";
+	}
+	userstr = "";
+}
+</script>
+</head>
+<!-- Body -->
+<body>
+	<label class="console">
+		8=D:\>
+	</label>
+	<input type="text" id="userinput" class="console">
+	</input>
+
+</body>
+</html>
