@@ -2,6 +2,7 @@ body{
 	background-color:#ffd1dc;
 	user-select: none;
 	-ms-user-select: none;
+	color:white;
 }
 .console{
   font-family: serif;
@@ -14,9 +15,9 @@ label{
 	padding-right: 0;
 }
 input{
-	background-color: black;
+	background-color: #ffd1dc;
 	border-radius: 0;
-	border: 0 solid black;
+	border: 0 solid #ffd1dc;
 	padding: 0 0;
 }
 input:focus{
